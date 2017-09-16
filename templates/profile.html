@@ -1,0 +1,90 @@
+
+{% extends "based.html" %}
+{% load staticfiles%}
+{% block style %}
+<style>
+.button{
+    margin-top:3em;
+    background-color:grey; 
+}
+.button:hover{
+    background-color:black; 
+}
+</style>
+{% endblock %}
+{% block header %}
+<header id="bt-header" class="bt-header bt-headervfour bt-haslayout">
+        <div class="container">
+            <div class="row">
+{% endblock %}
+{% block icon %}
+<li><a class="bt-btntogglemenu" href="javascript:void(0);"><img src="{% static 'images/icons/icon-04.png' %}" alt="image description"></a></li>
+{% endblock %} 
+{% block a %}
+    <main id="bt-main" class="bt-main bt-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="bt-content" class="bt-content">
+                        <div class="bt-portfolio bt-portfoliovone">
+                            <figure class="bt-featuredimg">
+                                    {% if user.profile.pic.url is not none %}
+                                <img src="{{user.profile.pic.url}}" alt="image description">
+                                    {% endif %}
+                            </figure>
+                            <div class="bt-portfolioinfo">
+                                <ul class="bt-clientinfo">
+                                    <li>
+                                        <span>First Name:</span>
+                                        <strong>{{ user.first_name }}</strong>
+                                    </li>
+                                    <li>
+                                        <span>Last Name:</span>
+                                        <strong> {{ user.last_name }}</strong>
+                                    </li>
+                                    <li>
+                                        <span>City:</span>
+                                        <strong>{{ user.profile.city}}</strong>
+                                    </li>
+                                    <li>
+                                        <span>College:</span>
+                                        <strong>{{ user.profile.college }}</strong>
+                                    </li>
+                                    <li>
+                                        <span>Email:</span>
+                                        <strong style="text-transform:lowercase;">{{ user.email }}</strong>
+                                    </li>
+                                    <br>
+                                    <li>
+                                    <a href="{% url 'edit_profile' %}" class="button btn btn-primary">EditProfile</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bt-portfoliotextbox">
+									<div class="bt-textbox">
+										<h2>Entries By {{user.username}}</h2>
+                                    </div>
+                            </div>
+                            <div id="bt-portfoliovonegallery" class="bt-portfoliogallery">
+                                    {% for i in entries %}
+                                <div class="cbp-item">
+                                    <article class="bt-album">
+                                        <figure>
+                                            <img src="{{ i.image.url}}" alt="image description">
+                                            <figcaption>
+                                                <a class="bt-btnviewimg cbp-lightbox" href="{{ i.image.url}}" data-title="{{ i.image_id}}"></a>
+                                            </figcaption>
+                                        </figure>
+                                    </article>
+                                </div>  
+                                {% endfor %}          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% endblock %}
+    {% block script %}
+    {% endblock %}
