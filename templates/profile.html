@@ -4,11 +4,19 @@
 {% block style %}
 <style>
 .button{
-    margin-top:3em;
+    margin-top:.5em;
     background-color:grey; 
 }
 .button:hover{
     background-color:black; 
+}
+.bt-featuredimg  {
+    height :auto;
+    width:100%;
+}
+.bt-portfoliovone .bt-featuredimg > img{
+    height :auto;
+    width:100%;
 }
 </style>
 {% endblock %}
@@ -53,12 +61,12 @@
                                     <li>
                                         <span>Email:</span>
                                         <strong style="text-transform:lowercase;">{{ user.email }}</strong>
-                                    </li>
-                                    <br>
-                                    <li>
-                                    <a href="{% url 'edit_profile' %}" class="button btn btn-primary">EditProfile</a>
-                                    </li>
+                                    </li>   
                                 </ul>
+                                <br><br>
+                                <li style="float:left; display:inline;">
+                                        <a href="{% url 'edit_profile' %}" class="button btn btn-primary">EditProfile</a>
+                                        </li>
                             </div>
                             <div class="bt-portfoliotextbox">
 									<div class="bt-textbox">
