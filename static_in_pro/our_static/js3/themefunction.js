@@ -323,28 +323,7 @@ jQuery(document).on('ready', function() {
 		{"featureType": "landscape", "elementType": "labels.text", "stylers": [{ "visibility": "off" }]},
 		{"featureType": "administrative", "elementType": "labels", "stylers": [{ "visibility": "off" }]},
 	]
-	jQuery("#bt-locationmap").gmap3({
-		marker: {
-			address: "447 Elizabeth St, Melbourne, Victoria, Australia",
-			options: {
-				title: "TASVER HTML5 CSS3 Theme",
-				icon: "images/mapmarker.png",
-			}
-		},
-		map: {
-			options: {
-				zoom: 16,
-				styles: gmapStyles,
-				scaleControl: true,
-				scrollwheel: false,
-				mapTypeControl: false,
-				disableDefaultUI: true,
-				navigationControl: false,
-				streetViewControl: false,
-				disableDoubleClickZoom: true,
-			}
-		}
-	});
+
 	/* -------------------------------------
 			SCROLL TO SECTION
 	-------------------------------------- */

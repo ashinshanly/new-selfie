@@ -1,4 +1,14 @@
 {% extends "based.html" %}
+{% load staticfiles %}
+{% block header %}
+<header id="bt-header" class="bt-header bt-headervfour bt-haslayout">
+        <div class="container-fluid">
+            <div class="row">
+{% endblock %}
+{% block logo %}<img src="{% static 'images/blacklogo.png' %}" alt="image description">{% endblock %}
+{% block icon %}
+<li><a class="bt-btntogglemenu" href="javascript:void(0);"><img src="{% static 'images/icons/icon-04.png' %}" alt="image description"></a></li>
+{% endblock %} 
 {% block a %}
 
     <!-- Banners -->
@@ -6,7 +16,9 @@
 			<div class="container-fluid  bt-fullheight">
 				<div class="row  bt-fullheight">
 					<div id="bt-content" class="bt-content bt-fullheight">
-						<div id="bt-locationmap" class="bt-locationmap"></div>
+						<div id="bt-locationmap" class="bt-locationmap">
+							<iframe height="100%" width="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn42ap4XvpzsRHkZFMP-YO4Y&key=AIzaSyA7UoMzqeCFCP9F7frh0bubz6lpTIeHzyM" allowfullscreen></iframe>							
+						</div>
 						<div class="bt-contactus bt-contactusvone">
 							<div class="bt-addresses">
 								<div class="bt-address">
@@ -74,6 +86,7 @@
     {% endblock %}
     {% block footer %}
 	{% endblock %}
+
     <!--************************************
         Footer End
 
