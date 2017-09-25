@@ -33,7 +33,10 @@
 		{
 		border:none;
 		}
-		
+		.g{
+			height: 100%;
+			width: 100%;
+		}
 			</style>
 	{% block style %}
 <!--	<style>
@@ -64,7 +67,7 @@ height:  auto;
             <nav id="bt-nav" class="bt-nav">
 					<a class="bt-btntogglemenu" href="javascript:void(0);">X</a>
 					<div id="bt-navigation" class="bt-navigation">
-						<strong class="bt-logo"><a href="index.html"><img src="{% static 'images/logo.png' %}" alt="image description"></a></strong>
+						<strong class="bt-logo"><a href="index.html"><img class="g" src="{% static 'images/whitelogo.png' %}" alt="image description"></a></strong>
 						<ul class="bt-menu">
 							<li class="bt-active bt-hasdropdown">
 								<a id="home" href="{% url 'home' %}">Home</a>
@@ -113,7 +116,7 @@ height:  auto;
 					<div class="container-fluid">
 				{% endblock %}
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<strong class="bt-logo"><a href="#"><img src="{% static 'images/logo.png' %}" alt="image description"></a></strong>
+							<strong class="bt-logo"><a href="#">{% block logo %}<img src="{% static 'images/whitelogo.png' %}" alt="image description">{% endblock %}</a></strong>
 							<div class="bt-navigationarea">
 								<ul>
 									<li class="bt-hasdropdown">
