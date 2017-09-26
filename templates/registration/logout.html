@@ -1,6 +1,16 @@
 {% extends "based.html" %}
 {% load i18n %}
 {% block style %}
+{% block logout1 %}
+<li class="bt-active  bt-hasdropdown">
+        <a id="logout" href="{% url 'register:auth_logout' %}">Logout</a>
+</li>
+{% endblock %}
+{% block logout %}
+<li class="bt-active  bt-hasdropdown">
+        <a id="logout" href="{% url 'register:auth_logout' %}">Logout</a>
+</li>
+{% endblock %}
 <!DOCTYPE html>
 <html>
 <script src="https://use.fontawesome.com/68a1a56600.js"></script>

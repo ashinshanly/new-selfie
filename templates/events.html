@@ -1,6 +1,15 @@
 {% extends "based.html" %}
 {% load staticfiles%}
-<!DOCTYPE HTML>
+{% block events1 %}
+<li class="bt-active  bt-hasdropdown">
+    <a id="events" href="{% url 'events' %}">Events</a>
+</li>
+{% endblock %}
+{% block events %}
+<li class="bt-active bt-hasdropdown">
+    <a href="{% url 'events' %}">Events</a>
+</li>
+{% endblock %}
 {% block a %}
 <html>
 <script src="https://use.fontawesome.com/68a1a56600.js"></script>

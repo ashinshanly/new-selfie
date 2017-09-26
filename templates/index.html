@@ -1,8 +1,16 @@
 {% extends "based.html" %}
 {% load staticfiles%}
 <!DOCTYPE HTML>
-
-
+{% block home1 %}
+<li class="bt-active bt-hasdropdown">
+  <a id="home" href="{% url 'home' %}">Home</a>
+</li>
+{% endblock %}
+{% block home %}
+<li class="bt-active bt-hasdropdown">
+  <a  href="{% url 'home' %}">Home</a>
+</li>
+{% endblock %}
 {% block a %}
 <html>
 <head>

@@ -69,34 +69,50 @@ height:  auto;
 					<div id="bt-navigation" class="bt-navigation">
 						<strong class="bt-logo"><a href="index.html"><img class="g" src="{% static 'images/whitelogo.png' %}" alt="image description"></a></strong>
 						<ul class="bt-menu">
-							<li class="bt-active bt-hasdropdown">
+							{% block home1 %}
+							<li class="bt-hasdropdown">
 								<a id="home" href="{% url 'home' %}">Home</a>
 							</li>
+							{% endblock %}
+							{% block events1 %}
 							<li class="bt-hasdropdown">
 								<a id="events" href="{% url 'events' %}">Events</a>
 							</li>
+							{% endblock %}
 							{% if user.is_authenticated %}
+							{% block profile1 %}
 							<li class="bt-hasdropdown">
 								<a id="profile" href="{% url 'profile' %}">Profile</a>
 							</li>
+							{% endblock %}
 							{% endif %}
+							{% block about1 %}
 							<li class="bt-hasdropdown">
 								<a id="about" href="{% url 'about' %}">About Us</a>
 							</li>
+							{% endblock %}
+							{% block contact1 %}
 							<li class="bt-hasdropdown">
-									<a id="about" href="{% url 'contact' %}">Contact Us</a>
+								<a id="contact" href="{% url 'contact' %}">Contact Us</a>
 							</li>
+							{% endblock %}
 							{% if user.is_authenticated %}
+							{% block logout1 %}
 							<li class="bt-hasdropdown">
 								<a id="logout" href="{% url 'register:auth_logout' %}">Logout</a>
 							</li>
+							{% endblock %}
 							{% else %}
+							{% block login1 %}
 							<li class="bt-hasdropdown">
 								<a id="login" href="{% url 'register:auth_login' %}">Login</a>
 							</li>
+							{% endblock %}
+							{% block signup1 %}
 							<li class="bt-hasdropdown">
 								<a id="signup" href="{% url 'register:registration_register' %}">SignUp</a>
 							</li>
+							{% endblock %}
 							{% endif %}
 						</ul>
 						<ul class="bt-socialicons">
@@ -119,34 +135,50 @@ height:  auto;
 							<strong class="bt-logo"><a href="#">{% block logo %}<img src="{% static 'images/whitelogo.png' %}" alt="image description">{% endblock %}</a></strong>
 							<div class="bt-navigationarea">
 								<ul>
+									{% block home %}
 									<li class="bt-hasdropdown">
 										<a  href="{% url 'home' %}">Home</a>
 									</li>
+									{% endblock %}
+									{% block events %}
 									<li class="bt-hasdropdown">
 										<a href="{% url 'events' %}">Events</a>
 									</li>
+									{% endblock %}
 									{% if user.is_authenticated %}
+									{% block profile %}
 									<li class="bt-hasdropdown">
 										<a href="{% url 'profile' %}">Profile</a>
 									</li>
+									{% endblock %}
 									{% endif %}
+									{% block about %}
 									<li class="bt-hasdropdown">
 										<a href="{% url 'about' %}">About Us</a>
 									</li>
+									{% endblock %}
+									{% block contact %}
 									<li class="bt-hasdropdown">
 										<a href="{% url 'contact' %}">Contact Us</a>
 									</li>
+									{% endblock %}
 									{% if user.is_authenticated %}
+									{% block logout %}
 									<li class="bt-hasdropdown">
 										<a href="{% url 'register:auth_logout' %}">Logout</a>
 									</li>
+									{% endblock %}
 									{% else %}
+									{% block login %}
 									<li class="bt-hasdropdown">
 										<a href="{% url 'register:auth_login' %}">Login</a>
 									</li>
+									{% endblock %}
+									{% block signup %}
 									<li class="bt-hasdropdown">
 										<a href="{% url 'register:registration_register' %}">SignUp</a>
 									</li>
+									{% endblock %}
 									{% endif %}
 									{% block icon %}
 									<li><a class="bt-btntogglemenu" href="javascript:void(0);"><img src="{% static 'images/icons/icon-01.png' %}" alt="image description"></a></li>

@@ -9,6 +9,16 @@
 {% block icon %}
 <li><a class="bt-btntogglemenu" href="javascript:void(0);"><img src="{% static 'images/icons/icon-04.png' %}" alt="image description"></a></li>
 {% endblock %} 
+{% block contact1 %}
+<li class="bt-active bt-hasdropdown">
+	<a id="contact" href="{% url 'contact' %}">Contact Us</a>
+</li>
+{% endblock %}
+{% block contact %}
+<li class="bt-active bt-hasdropdown">
+	<a id="contact" href="{% url 'contact' %}">Contact Us</a>
+</li>
+{% endblock %}
 {% block a %}
 
     <!-- Banners -->

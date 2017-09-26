@@ -16,7 +16,9 @@
 .fa:hover {
   color:green;
 }
- 
+.container{
+     width: auto;
+ }
 button:focus {
     background:blue;
 }
@@ -27,13 +29,23 @@ button:focus {
    
     </style>
     {% endblock %}
+    {% block events1 %}
+    <li class="bt-active  bt-hasdropdown">
+        <a id="events" href="{% url 'events' %}">Events</a>
+    </li>
+    {% endblock %}
+    {% block events %}
+    <li class="bt-active bt-hasdropdown">
+        <a href="{% url 'events' %}">Events</a>
+    </li>
+    {% endblock %}
     <!-- Banners -->
     {% block a %}
          {% csrf_token %}
             <div class="bt-innerpagebanner bt-innerpagebannerv2 bt-fullheight">
                 <figure class="bt-fullheight" data-vide-bg="poster:{% static 'images/bg/banner-01' %}" data-vide-options="position: 0% 50%">
                     <figcaption>
-                        <div class="container">
+                        <div class="container" style="width:auto;">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><center>
                                     <div class="bt-innerbannercontent">

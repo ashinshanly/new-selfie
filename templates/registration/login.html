@@ -4,7 +4,16 @@
 {% load staticfiles %}
 {% block title %}Login{% endblock %}
 
-
+{% block login1 %}
+<li class="bt-active bt-hasdropdown">
+	<a id="login" href="{% url 'register:auth_login' %}">Login</a>
+</li>
+{% endblock %}
+{% block login %}
+<li class="bt-active bt-hasdropdown">
+	<a id="login" href="{% url 'register:auth_login' %}">Login</a>
+</li>
+{% endblock %}
 {% block style %}
 <!-- Meta tag Keywords -->
 <meta name="viewport" content="width=device-width, initial-scale=1">

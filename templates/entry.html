@@ -37,6 +37,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
     }
 </style>
 {% endblock %}
+{% block events1 %}
+<li class="bt-active  bt-hasdropdown">
+    <a id="events" href="{% url 'events' %}">Events</a>
+</li>
+{% endblock %}
+{% block events %}
+<li class="bt-active bt-hasdropdown">
+    <a href="{% url 'events' %}">Events</a>
+</li>
+{% endblock %}
 {% block a %}
 <main id="bt-main" class="bt-main bt-haslayout">
 <div class="center-container">

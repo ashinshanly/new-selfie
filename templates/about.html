@@ -2,6 +2,16 @@
 {% load staticfiles %}
 {% block style %}
 	{% endblock %}
+	{% block about %}
+	<li class="bt-active bt-hasdropdown">
+		<a id="about" href="{% url 'about' %}">About Us</a>
+	</li>
+	{% endblock %}
+	{% block about1 %}
+	<li class="bt-active bt-hasdropdown">
+		<a id="about" href="{% url 'about' %}">About Us</a>
+	</li>
+	{% endblock %}
 {% block a %}
 	<!--************************************
 				Inner Page Banner Start
