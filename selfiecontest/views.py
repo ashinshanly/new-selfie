@@ -49,6 +49,10 @@ class GreenEntryCreate(CreateView):
         p.liked = p.has_liked(request.user)
     return render(request,"hala.html",{'pro':pro,'forms':form})"""
 
+def media(request):
+    return render(request,'media.html')
+
+
 @login_required
 def gallery(request):
         pro=Picto.objects.all()
